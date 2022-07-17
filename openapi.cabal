@@ -1,0 +1,138 @@
+cabal-version: 1.12
+
+name:           openapi
+version:        0.1.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      IBKR
+      IBKR.Operations.Get_ccp_account
+      IBKR.Operations.Post_ccp_auth_init
+      IBKR.Operations.Post_ccp_auth_response
+      IBKR.Operations.Put_ccp_order
+      IBKR.Operations.Post_ccp_order
+      IBKR.Operations.Delete_ccp_order
+      IBKR.Operations.Get_ccp_orders
+      IBKR.Operations.Get_ccp_positions
+      IBKR.Operations.Get_ccp_status
+      IBKR.Operations.Get_ccp_trades
+      IBKR.Operations.Get_fyi_deliveryoptions
+      IBKR.Operations.Post_fyi_deliveryoptions_device
+      IBKR.Operations.Put_fyi_deliveryoptions_email
+      IBKR.Operations.Delete_fyi_deliveryoptions__deviceId_
+      IBKR.Operations.Get_fyi_disclaimer__typecode_
+      IBKR.Operations.Put_fyi_disclaimer__typecode_
+      IBKR.Operations.Get_fyi_notifications
+      IBKR.Operations.Get_fyi_notifications_more
+      IBKR.Operations.Put_fyi_notifications__notificationId_
+      IBKR.Operations.Get_fyi_settings
+      IBKR.Operations.Post_fyi_settings__typecode_
+      IBKR.Operations.Get_fyi_unreadnumber
+      IBKR.Operations.Get_hmds_history
+      IBKR.Operations.Post_hmds_scanner
+      IBKR.Operations.Post_iserver_account
+      IBKR.Operations.Get_iserver_account_alert__id_
+      IBKR.Operations.Get_iserver_account_mta
+      IBKR.Operations.Get_iserver_account_order_status__orderId_
+      IBKR.Operations.Post_iserver_account_orders
+      IBKR.Operations.Post_iserver_account_orders__faGroup_
+      IBKR.Operations.Get_iserver_account_pnl_partitioned
+      IBKR.Operations.Get_iserver_account_trades
+      IBKR.Operations.Post_iserver_account__accountId__alert
+      IBKR.Operations.Post_iserver_account__accountId__alert_activate
+      IBKR.Operations.Delete_iserver_account__accountId__alert__alertId_
+      IBKR.Operations.Get_iserver_account__accountId__alerts
+      IBKR.Operations.Post_iserver_account__accountId__order
+      IBKR.Operations.Post_iserver_account__accountId__order_whatif
+      IBKR.Operations.Post_iserver_account__accountId__order__orderId_
+      IBKR.Operations.Delete_iserver_account__accountId__order__orderId_
+      IBKR.Operations.Post_iserver_account__accountId__orders
+      IBKR.Operations.Post_iserver_account__accountId__orders_whatif
+      IBKR.Operations.Get_iserver_accounts
+      IBKR.Operations.Post_iserver_auth_status
+      IBKR.Operations.Post_iserver_contract_rules
+      IBKR.Operations.Get_iserver_contract__conid__algos
+      IBKR.Operations.Get_iserver_contract__conid__info
+      IBKR.Operations.Get_iserver_contract__conid__info_and_rules
+      IBKR.Operations.Get_iserver_marketdata_history
+      IBKR.Operations.Get_iserver_marketdata_snapshot
+      IBKR.Operations.Get_iserver_marketdata_unsubscribeall
+      IBKR.Operations.Get_iserver_marketdata__conid__unsubscribe
+      IBKR.Operations.Post_iserver_reauthenticate
+      IBKR.Operations.Post_iserver_reply__replyid_
+      IBKR.Operations.Get_iserver_scanner_params
+      IBKR.Operations.Post_iserver_scanner_run
+      IBKR.Operations.Get_iserver_secdef_info
+      IBKR.Operations.Post_iserver_secdef_search
+      IBKR.Operations.Get_iserver_secdef_strikes
+      IBKR.Operations.Post_logout
+      IBKR.Operations.Get_md_snapshot
+      IBKR.Operations.Post_pa_performance
+      IBKR.Operations.Post_pa_summary
+      IBKR.Operations.Post_pa_transactions
+      IBKR.Operations.Get_portfolio_accounts
+      IBKR.Operations.Post_portfolio_allocation
+      IBKR.Operations.Get_portfolio_positions__conid_
+      IBKR.Operations.Get_portfolio_subaccounts
+      IBKR.Operations.Get_portfolio_subaccounts2__page_
+      IBKR.Operations.Get_portfolio__accountId__allocation
+      IBKR.Operations.Get_portfolio__accountId__ledger
+      IBKR.Operations.Get_portfolio__accountId__meta
+      IBKR.Operations.Get_portfolio__accountId__position__conid_
+      IBKR.Operations.Post_portfolio__accountId__positions_invalidate
+      IBKR.Operations.Get_portfolio__accountId__positions__pageId_
+      IBKR.Operations.Get_portfolio__accountId__summary
+      IBKR.Operations.Get_sso_validate
+      IBKR.Operations.Post_tickle
+      IBKR.Operations.Get_trsrv_futures
+      IBKR.Operations.Post_trsrv_secdef
+      IBKR.Operations.Get_trsrv_secdef_schedule
+      IBKR.Operations.Get_trsrv_stocks
+      IBKR.Operations.Post_ws
+      IBKR.Types
+      IBKR.TypeAlias
+      IBKR.Types.Account
+      IBKR.Types.AlertResponse
+      IBKR.Types.Allocation
+      IBKR.Types.AuthStatus
+      IBKR.Types.Contract
+      IBKR.Types.Futures
+      IBKR.Types.HistoryData
+      IBKR.Types.HistoryResult
+      IBKR.Types.Ledger
+      IBKR.Types.MarketData
+      IBKR.Types.Notifications
+      IBKR.Types.OrderData
+      IBKR.Types.OrderStatus
+      IBKR.Types.Performance
+      IBKR.Types.Position
+      IBKR.Types.PositionData
+      IBKR.Types.ScannerResult
+      IBKR.Types.Secdef
+      IBKR.Types.Stocks
+      IBKR.Types.Summary
+      IBKR.Types.SystemError
+      IBKR.Types.Trade
+      IBKR.Types.Transactions
+      IBKR.Configuration
+      IBKR.SecuritySchemes
+      IBKR.Common
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , text
+    , ghc-prim
+    , http-conduit
+    , http-client
+    , http-types
+    , bytestring
+    , aeson
+    , unordered-containers
+    , vector
+    , scientific
+    , time
+    , mtl
+    , transformers
+  default-language: Haskell2010

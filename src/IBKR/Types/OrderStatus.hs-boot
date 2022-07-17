@@ -1,0 +1,19 @@
+module IBKR.Types.OrderStatus where
+import Data.Aeson
+import qualified Data.Aeson as Data.Aeson.Types.Internal
+import qualified IBKR.Common
+data Order_status
+instance Show Order_status
+instance Eq Order_status
+instance FromJSON Order_status
+instance ToJSON Order_status
+data Order_statusExit_strategy_tool_availability
+instance Show Order_statusExit_strategy_tool_availability
+instance Eq Order_statusExit_strategy_tool_availability
+instance FromJSON Order_statusExit_strategy_tool_availability
+instance ToJSON Order_statusExit_strategy_tool_availability
+data Order_statusSide
+instance Show Order_statusSide
+instance Eq Order_statusSide
+instance FromJSON Order_statusSide
+instance ToJSON Order_statusSide

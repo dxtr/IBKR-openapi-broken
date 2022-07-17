@@ -1,0 +1,44 @@
+module IBKR.Types.OrderData where
+import Data.Aeson
+import qualified Data.Aeson as Data.Aeson.Types.Internal
+import qualified IBKR.Common
+data Order_data
+instance Show Order_data
+instance Eq Order_data
+instance FromJSON Order_data
+instance ToJSON Order_data
+data Order_dataExecType
+instance Show Order_dataExecType
+instance Eq Order_dataExecType
+instance FromJSON Order_dataExecType
+instance ToJSON Order_dataExecType
+data Order_dataOrderStatus
+instance Show Order_dataOrderStatus
+instance Eq Order_dataOrderStatus
+instance FromJSON Order_dataOrderStatus
+instance ToJSON Order_dataOrderStatus
+data Order_dataOrderType
+instance Show Order_dataOrderType
+instance Eq Order_dataOrderType
+instance FromJSON Order_dataOrderType
+instance ToJSON Order_dataOrderType
+data Order_dataSecType
+instance Show Order_dataSecType
+instance Eq Order_dataSecType
+instance FromJSON Order_dataSecType
+instance ToJSON Order_dataSecType
+data Order_dataSide
+instance Show Order_dataSide
+instance Eq Order_dataSide
+instance FromJSON Order_dataSide
+instance ToJSON Order_dataSide
+data Order_dataTif
+instance Show Order_dataTif
+instance Eq Order_dataTif
+instance FromJSON Order_dataTif
+instance ToJSON Order_dataTif
+data Order_dataWarnings
+instance Show Order_dataWarnings
+instance Eq Order_dataWarnings
+instance FromJSON Order_dataWarnings
+instance ToJSON Order_dataWarnings
